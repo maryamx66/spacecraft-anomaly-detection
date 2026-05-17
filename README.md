@@ -28,3 +28,22 @@ Ensure you have Python 3.12+ and your virtual environment activated, then instal
 ```bash
 pip install -r requirements.txt
 ```
+
+**2. Run the Dashboard**
+Launch the interactive mission control center:
+Bash
+
+streamlit run app.py
+
+**3. Run the Evaluation Suite**
+Generate the final metrics and charts for the ablation study:
+Bash
+
+python evaluation.py
+python confusion_matrix.py
+
+(Results will be saved in the evaluation_results/ directory).
+
+##Results Overview
+
+Our ablation study demonstrates that the full architecture (full_lstm_cnn_attention_skip) achieves the highest F1-Score on the test set. The inclusion of residual skip connections proved strictly necessary for reconstructing multidimensional normal telemetry, while the attention mechanism allowed the model to correctly focus on pre-anomaly sensor spikes.
