@@ -44,6 +44,6 @@ python confusion_matrix.py
 
 (Results will be saved in the evaluation_results/ directory).
 
-##Results Overview
+## Results Overview
 
 Our ablation study demonstrates that the full architecture (full_lstm_cnn_attention_skip) achieves the highest F1-Score on the test set. The inclusion of residual skip connections proved strictly necessary for reconstructing multidimensional normal telemetry, while the attention mechanism allowed the model to correctly focus on pre-anomaly sensor spikes.
