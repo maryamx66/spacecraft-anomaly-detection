@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#00E5FF"          # Neon Cyan (glowing accents)
+backgroundColor = "#030712"       # Deep Space Black
+secondaryBackgroundColor = "#111827" # Dark Nebula Grey (cards/sidebar)
+textColor = "#F9FAFB"             # Star White
+font = "sans serif"

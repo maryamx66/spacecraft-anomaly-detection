@@ -1,0 +1,47 @@
+[
+    {
+        "variant_name": "full_lstm_cnn_attention_skip",
+        "best_val_loss": 0.036440125703977956,
+        "use_cnn": true,
+        "use_attention": true,
+        "use_skip": true,
+        "use_gru": false,
+        "max_channels": 15
+    },
+    {
+        "variant_name": "no_cnn_lstm_attention_skip",
+        "best_val_loss": 0.05994513449591717,
+        "use_cnn": false,
+        "use_attention": true,
+        "use_skip": true,
+        "use_gru": false,
+        "max_channels": 15
+    },
+    {
+        "variant_name": "no_skip_lstm_cnn_attention",
+        "best_val_loss": 0.35024416057526003,
+        "use_cnn": true,
+        "use_attention": true,
+        "use_skip": false,
+        "use_gru": false,
+        "max_channels": 15
+    },
+    {
+        "variant_name": "no_attention_lstm_cnn_skip",
+        "best_val_loss": 0.036343230915788026,
+        "use_cnn": true,
+        "use_attention": false,
+        "use_skip": true,
+        "use_gru": false,
+        "max_channels": 15
+    },
+    {
+        "variant_name": "full_gru_cnn_attention_skip",
+        "best_val_loss": 0.03895588272800004,
+        "use_cnn": true,
+        "use_attention": true,
+        "use_skip": true,
+        "use_gru": true,
+        "max_channels": 15
+    }
+]

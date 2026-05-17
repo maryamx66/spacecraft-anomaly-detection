@@ -1,0 +1,41 @@
+# =========================
+# Python & Environment
+# =========================
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Machine Learning & Data
+# =========================
+# Ignore heavy PyTorch model weights (GitHub has a 100MB file limit)
+*.pth
+*.pt
+saved_models/*.pth
+
+# Ignore raw data files and numpy arrays to save space
+*.csv
+*.npy
+*.npz
+
+# =========================
+# Streamlit
+# =========================
+# Ignore local secrets or credentials if you ever add them
+.streamlit/secrets.toml
+
+# =========================
+# OS & Editor Files
+# =========================
+# macOS folder attributes (Prevents those annoying hidden files from uploading)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE workspaces
+.vscode/
+.idea/
+*.swp

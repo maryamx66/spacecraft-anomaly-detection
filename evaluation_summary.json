@@ -1,0 +1,67 @@
+[
+    {
+        "variant_name": "full_lstm_cnn_attention_skip",
+        "accuracy": 0.8393043958863821,
+        "precision": 0.1612576064908722,
+        "recall": 0.04673034533431301,
+        "f1_score": 0.07246211689643386,
+        "tp": 318,
+        "fp": 1654,
+        "tn": 42202,
+        "fn": 6487,
+        "threshold_type": "dynamic_nonparametric",
+        "best_val_loss": 0.036440125703977956
+    },
+    {
+        "variant_name": "no_cnn_lstm_attention_skip",
+        "accuracy": 0.8393438739859063,
+        "precision": 0.15332640332640332,
+        "recall": 0.04335047759000735,
+        "f1_score": 0.0675907893229465,
+        "tp": 295,
+        "fp": 1629,
+        "tn": 42227,
+        "fn": 6510,
+        "threshold_type": "dynamic_nonparametric",
+        "best_val_loss": 0.05994513449591717
+    },
+    {
+        "variant_name": "no_skip_lstm_cnn_attention",
+        "accuracy": 0.852134778231776,
+        "precision": 0.19859402460456943,
+        "recall": 0.03321087435709037,
+        "f1_score": 0.05690545134080322,
+        "tp": 226,
+        "fp": 912,
+        "tn": 42944,
+        "fn": 6579,
+        "threshold_type": "dynamic_nonparametric",
+        "best_val_loss": 0.35024416057526003
+    },
+    {
+        "variant_name": "no_attention_lstm_cnn_skip",
+        "accuracy": 0.8372712737608812,
+        "precision": 0.1450419338924519,
+        "recall": 0.043203526818515796,
+        "f1_score": 0.06657608695652173,
+        "tp": 294,
+        "fp": 1733,
+        "tn": 42123,
+        "fn": 6511,
+        "threshold_type": "dynamic_nonparametric",
+        "best_val_loss": 0.036343230915788026
+    },
+    {
+        "variant_name": "full_gru_cnn_attention_skip",
+        "accuracy": 0.8379029233532698,
+        "precision": 0.14630467571644043,
+        "recall": 0.04276267450404115,
+        "f1_score": 0.06618148737775756,
+        "tp": 291,
+        "fp": 1698,
+        "tn": 42158,
+        "fn": 6514,
+        "threshold_type": "dynamic_nonparametric",
+        "best_val_loss": 0.03895588272800004
+    }
+]
