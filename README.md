@@ -9,7 +9,7 @@ Using an unsupervised Time-Series Autoencoder and the NASA Telemanom dataset (SM
 - **Advanced Neural Architecture:** Combines 1D-CNNs for feature extraction, LSTMs for sequential dependencies, Bahdanau-style temporal attention, and skip connections for high-fidelity reconstruction.
 - **Mission Control Dashboard:** An interactive Streamlit UI featuring live system status metrics and a customizable multi-sensor grid matrix for real-time telemetry analysis.
 - **Dynamic Thresholding:** Implements Non-parametric Dynamic Thresholding (NDT) to intelligently adapt to shifting noise environments.
-- **Automated Evaluation Pipeline:** Built-in testing scripts that automatically generate IEEE-compliant confusion matrices, performance reports, and ablation study visualizations.
+- **Automated Evaluation Pipeline:** Built-in testing scripts that automatically generate confusion matrices, and performance reports
 
 ## Repository Structure
 
