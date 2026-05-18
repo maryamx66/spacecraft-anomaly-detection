@@ -17,8 +17,8 @@ Bölümler:
 """
 
 from __future__ import annotations
-
 import os
+import sys
 import json
 import numpy as np
 import torch
@@ -26,6 +26,13 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+
+# --- NEW ROUTING CODE ---
+# Tell Python to look in the parent directory for model.py and data_loader.py
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+if parent_dir not in sys.path:
+    sys.path.append(parent_dir)
 
 from preprocessing import PreprocessConfig
 from data_loader import build_telemanom_pipeline
@@ -38,6 +45,11 @@ from metrics import (
     channel_wise_errors,
     error_by_anomaly_class,
 )
+
+# Route the output back out to the main directory's evaluation_graphs folder
+OUTPUT_DIR = os.path.join(parent_dir, "evaluation_graphs")
+SAVED_MODELS_DIR = os.path.join(parent_dir, "saved_models")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # AYARLAR

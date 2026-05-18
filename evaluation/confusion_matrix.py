@@ -1,12 +1,21 @@
 from __future__ import annotations
-import os, json, itertools
+import os
+import sys
+import json
+import itertools
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from dataclasses import dataclass
 
-OUTPUT_DIR = "evaluation_results"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+if parent_dir not in sys.path:
+    sys.path.append(parent_dir)
+
+# Route the output back out to the main directory's evaluation_graphs folder
+OUTPUT_DIR = os.path.join(parent_dir, "evaluation_graphs")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 

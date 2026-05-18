@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from preprocessing import PreprocessConfig
 from data_loader import build_telemanom_pipeline
 from model import TimeSeriesAutoencoder
-from metrics import compute_reconstruction_errors, nonparametric_dynamic_threshold
+from evaluation.metrics import nonparametric_dynamic_threshold
 
 # ==========================================
 # 1. CACHE THE HEAVY LIFTING

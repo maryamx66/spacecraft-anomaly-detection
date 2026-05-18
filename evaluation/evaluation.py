@@ -1,6 +1,6 @@
 from __future__ import annotations
-print("demo")
 import os
+import sys
 import json
 import copy
 import numpy as np
@@ -10,10 +10,17 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
+# --- NEW ROUTING CODE ---
+# Tell Python to look in the parent directory for your model and data_loader
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+if parent_dir not in sys.path:
+    sys.path.append(parent_dir)
+
 from preprocessing import PreprocessConfig
 from data_loader import build_telemanom_pipeline
 from model import TimeSeriesAutoencoder
-print("demo")
+
 from metrics import (
     compute_reconstruction_errors,
     aggregate_errors_to_scalar,
@@ -24,15 +31,11 @@ from metrics import (
     error_by_anomaly_class,
     ClassificationMetrics,
 )
-print("demo")
 
-SAVED_MODELS_DIR  = "saved_models"
-OUTPUT_DIR        = "evaluation_results"
-DEVICE            = torch.device(
-    "cuda"  if torch.cuda.is_available()
-    else "mps" if torch.backends.mps.is_available()
-    else "cpu"
-)
+# Point to the folders in the parent directory
+SAVED_MODELS_DIR  = os.path.join(parent_dir, "saved_models")
+OUTPUT_DIR        = os.path.join(parent_dir, "evaluation_graphs") # Updated to match your screenshot
+DEVICE            = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 print(f"[INFO] Evaluation device: {DEVICE}")
